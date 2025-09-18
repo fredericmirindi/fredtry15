@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frédéric Mirindi - Advanced Portfolio</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#21808d">
+    <meta name="description" content="Advanced AI-powered portfolio of Frédéric Mirindi - PhD Candidate in Economics & Econometrics">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    
+    <!-- Advanced CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="advanced-features.css">
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+
+<!-- Advanced Navigation with AI Assistant -->
+<nav class="navbar advanced-nav" id="navbar">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <span class="hero-nom">Frédéric Mirindi</span>
+            <div class="nav-ai-indicator" id="ai-status">
+                <span class="ai-pulse"></span>
+                <span class="ai-label">AI Assistant</span>
+            </div>
+        </div>
+        
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item">
+                <a href="#home" class="nav-link active" data-page="home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#research-lab" class="nav-link" data-page="research-lab">Research Lab</a>
+            </li>
+            <li class="nav-item">
+                <a href="#publications" class="nav-link" data-page="publications">Publications</a>
+            </li>
+            <li class="nav-item">
+                <a href="#ai-tools" class="nav-link" data-page="ai-tools">AI Tools</a>
+            </li>
+            <li class="nav-item">
+                <a href="#collaboration" class="nav-link" data-page="collaboration">Collaborate</a>
+            </li>
+            <li class="nav-item">
+                <a href="#timeline" class="nav-link" data-page="timeline">Timeline</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="nav-link" data-page="contact">Contact</a>
+            </li>
+        </ul>
+        
+        <div class="nav-controls">
+            <button class="ai-assistant-btn" id="ai-assistant-toggle">
+                <span class="ai-icon">🤖</span>
+                <span class="ai-text">Ask AI</span>
+            </button>
+            <button class="theme-toggle" id="theme-toggle">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <button class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- AI Assistant Panel -->
+<div class="ai-assistant-panel" id="ai-assistant-panel">
+    <div class="ai-panel-header">
+        <h3>AI Research Assistant</h3>
+        <button class="ai-panel-close" id="ai-panel-close">&times;</button>
+    </div>
+    <div class="ai-conversation" id="ai-conversation">
+        <div class="ai-message ai-welcome">
+            <div class="ai-avatar">🤖</div>
+            <div class="ai-content">
+                <p>Hello! I'm your AI research assistant. I can help you:</p>
+                <ul>
+                    <li>Find relevant research papers</li>
+                    <li>Analyze economic data</li>
+                    <li>Generate research insights</li>
+                    <li>Schedule collaborations</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="ai-input-area">
+        <input type="text" class="ai-input" id="ai-input" placeholder="Ask me anything about research...">
+        <button class="ai-send-btn" id="ai-send-btn">
+            <span class="send-icon">→</span>
+        </button>
+    </div>
+</div>
+
+<!-- Particles Background -->
+<div id="particles-js"></div>
+
+<!-- Main Content -->
+<main class="main-content">
+    
+    <!-- Advanced Home Page -->
+    <section class="page active" id="home">
+        <div class="hero-section advanced-hero">
+            <div class="hero-3d-background" id="hero-3d-scene"></div>
+            
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            <span class="typing-text advanced-typing">Frédéric Mirindi</span>
+                        </h1>
+                        <p class="hero-subtitle animated-gradient">PhD Candidate - Economics & AI</p>
+                        <p class="hero-subtitle">Founder - ThinkBit Edge Corp.</p>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="25">0</span>
+                                <span class="stat-label">Publications</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="15">0</span>
+                                <span class="stat-label">AI Models</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="50">0</span>
+                                <span class="stat-label">Citations</span>
+                            </div>
+                        </div>
+                        
+                        <p class="hero-description">
+                            Leading researcher at the intersection of artificial intelligence and economics, 
+                            pioneering machine learning solutions for economic forecasting and policy analysis.
+                        </p>
+                        
+                        <div class="hero-buttons">
+                            <a class="btn btn--primary btn-gradient" href="#research-lab">
+                                <span class="btn-icon">🔬</span>
+                                Explore Research Lab
+                            </a>
+                            <a class="btn btn--outline btn-glow" href="#ai-tools">
+                                <span class="btn-icon">🤖</span>
+                                Try AI Tools
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image">
+                        <div class="profile-container advanced-profile">
+                            <div class="profile-hologram">
+                                <div class="hologram-rings"></div>
+                                <div class="profile-image">
+                                    <div class="circle">
+                                        <img src="https://via.placeholder.com/300x300/21808d/ffffff?text=FM" alt="Frederic Mirindi" class="profile-photo">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-status">
+                                <span class="status status--success pulse">🟢 Available for Collaboration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Real-time Research Metrics -->
+        <div class="research-metrics-section">
+            <div class="container">
+                <h2>Live Research Impact</h2>
+                <div class="metrics-dashboard">
+                    <div class="metric-card">
+                        <div class="metric-icon">📊</div>
+                        <div class="metric-content">
+                            <h3>Research Impact Score</h3>
+                            <div class="metric-value" id="impact-score">847</div>
+                            <div class="metric-trend">↑ +12% this month</div>
+                        </div>
+                        <canvas class="metric-chart" id="impact-chart"></canvas>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-icon">🌐</div>
+                        <div class="metric-content">
+                            <h3>Global Reach</h3>
+                            <div class="metric-value" id="global-reach">42</div>
+                            <div class="metric-trend">Countries citing work</div>
+                        </div>
+                        <div class="world-map-mini" id="reach-map"></div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-icon">🤝</div>
+                        <div class="metric-content">
+                            <h3>Collaborations</h3>
+                            <div class="metric-value" id="collaborations">18</div>
+                            <div class="metric-trend">Active projects</div>
+                        </div>
+                        <div class="collaboration-network" id="collab-network"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Research Lab -->
+    <section class="page" id="research-lab">
+        <div class="container">
+            <header class="page-header">
+                <h1>Research Laboratory</h1>
+                <p>Interactive exploration of cutting-edge AI research in economics</p>
+            </header>
+            
+            <div class="lab-interface">
+                <!-- Research Areas with 3D Visualization -->
+                <div class="research-areas-3d">
+                    <div class="area-selector">
+                        <button class="area-btn active" data-area="forecasting">Economic Forecasting</button>
+                        <button class="area-btn" data-area="nlp">NLP Economics</button>
+                        <button class="area-btn" data-area="blockchain">Blockchain Economics</button>
+                        <button class="area-btn" data-area="policy">Policy Analysis</button>
+                    </div>
+                    <div class="area-visualization" id="research-3d-scene"></div>
+                </div>
+                
+                <!-- Interactive Model Playground -->
+                <div class="model-playground">
+                    <h3>AI Model Playground</h3>
+                    <div class="playground-controls">
+                        <div class="control-group">
+                            <label>Model Type</label>
+                            <select id="model-type">
+                                <option value="lstm">LSTM Neural Network</option>
+                                <option value="transformer">Transformer</option>
+                                <option value="gan">Generative Adversarial Network</option>
+                                <option value="reinforcement">Reinforcement Learning</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label>Dataset</label>
+                            <select id="dataset">
+                                <option value="gdp">GDP Time Series</option>
+                                <option value="inflation">Inflation Rates</option>
+                                <option value="market">Stock Market Data</option>
+                                <option value="policy">Policy Documents</option>
+                            </select>
+                        </div>
+                        <button class="btn btn--primary" id="run-model">Run Model</button>
+                    </div>
+                    
+                    <div class="model-results" id="model-results">
+                        <div class="results-tabs">
+                            <button class="tab active" data-tab="visualization">Visualization</button>
+                            <button class="tab" data-tab="metrics">Metrics</button>
+                            <button class="tab" data-tab="code">Code</button>
+                        </div>
+                        <div class="results-content">
+                            <div class="tab-content active" id="visualization-tab">
+                                <canvas id="model-viz-chart"></canvas>
+                            </div>
+                            <div class="tab-content" id="metrics-tab">
+                                <div class="metrics-grid">
+                                    <div class="metric-item">
+                                        <span class="metric-label">Accuracy</span>
+                                        <span class="metric-value">94.7%</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-label">Loss</span>
+                                        <span class="metric-value">0.023</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-label">Training Time</span>
+                                        <span class="metric-value">2.3s</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="code-tab">
+                                <pre><code class="language-python"># AI Model Implementation
+import tensorflow as tf
+import numpy as np
+
+class EconomicForecaster:
+    def __init__(self):
+        self.model = self.build_model()
+    
+    def build_model(self):
+        model = tf.keras.Sequential([
+            tf.keras.layers.LSTM(50, return_sequences=True),
+            tf.keras.layers.Dropout(0.2),
+            tf.keras.layers.LSTM(50),
+            tf.keras.layers.Dense(1)
+        ])
+        model.compile(optimizer='adam', loss='mse')
+        return model</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Publications with AI Search -->
+    <section class="page" id="publications">
+        <div class="container">
+            <header class="page-header">
+                <h1>Publications & Research</h1>
+                <p>AI-powered search and analysis of academic publications</p>
+            </header>
+            
+            <!-- Smart Search Interface -->
+            <div class="smart-search-interface">
+                <div class="search-controls">
+                    <div class="search-input-group">
+                        <input type="text" class="smart-search-input" id="pub-search" 
+                               placeholder="Search by topic, methodology, or ask a question...">
+                        <button class="search-ai-btn" id="search-ai-btn">
+                            <span class="ai-icon">🧠</span>
+                        </button>
+                    </div>
+                    
+                    <div class="search-filters">
+                        <select id="search-year">
+                            <option value="">All Years</option>
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                        </select>
+                        <select id="search-type">
+                            <option value="">All Types</option>
+                            <option value="journal">Journal Articles</option>
+                            <option value="conference">Conference Papers</option>
+                            <option value="preprint">Preprints</option>
+                        </select>
+                        <button class="filter-toggle" id="advanced-filters">Advanced</button>
+                    </div>
+                </div>
+                
+                <!-- Search Suggestions -->
+                <div class="search-suggestions" id="search-suggestions">
+                    <div class="suggestion-category">
+                        <h4>Trending Topics</h4>
+                        <div class="suggestion-tags">
+                            <button class="suggestion-tag">AI in Economics</button>
+                            <button class="suggestion-tag">Machine Learning Forecasting</button>
+                            <button class="suggestion-tag">Blockchain Analysis</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Publications Grid with Enhanced Cards -->
+            <div class="publications-grid" id="publications-grid">
+                <!-- Publications will be dynamically loaded -->
+            </div>
+            
+            <!-- Publication Analytics -->
+            <div class="publication-analytics">
+                <h3>Research Analytics</h3>
+                <div class="analytics-dashboard">
+                    <div class="analytics-chart">
+                        <h4>Publication Timeline</h4>
+                        <canvas id="pub-timeline-chart"></canvas>
+                    </div>
+                    <div class="analytics-chart">
+                        <h4>Citation Network</h4>
+                        <div id="citation-network"></div>
+                    </div>
+                    <div class="analytics-chart">
+                        <h4>Research Impact</h4>
+                        <canvas id="impact-metrics-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Tools Section -->
+    <section class="page" id="ai-tools">
+        <div class="container">
+            <header class="page-header">
+                <h1>AI Research Tools</h1>
+                <p>Interactive tools powered by artificial intelligence</p>
+            </header>
+            
+            <div class="ai-tools-grid">
+                <!-- Economic Forecasting Tool -->
+                <div class="ai-tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">📈</div>
+                        <h3>Economic Forecasting AI</h3>
+                        <div class="tool-status">
+                            <span class="status-indicator active"></span>
+                            <span class="status-text">Online</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-interface">
+                        <div class="input-group">
+                            <label>Economic Indicator</label>
+                            <select id="econ-indicator">
+                                <option value="gdp">GDP Growth</option>
+                                <option value="inflation">Inflation Rate</option>
+                                <option value="unemployment">Unemployment</option>
+                                <option value="interest">Interest Rates</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label>Forecast Horizon</label>
+                            <input type="range" id="forecast-horizon" min="1" max="24" value="12">
+                            <span class="range-value">12 months</span>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label>Confidence Level</label>
+                            <input type="range" id="confidence-level" min="80" max="99" value="95">
+                            <span class="range-value">95%</span>
+                        </div>
+                        
+                        <button class="btn btn--primary tool-run-btn" id="run-forecast">
+                            <span class="btn-loading"></span>
+                            Generate Forecast
+                        </button>
+                    </div>
+                    
+                    <div class="tool-results" id="forecast-results">
+                        <canvas id="forecast-chart"></canvas>
+                        <div class="forecast-insights">
+                            <div class="insight-item">
+                                <span class="insight-label">Predicted Value</span>
+                                <span class="insight-value">+2.3%</span>
+                            </div>
+                            <div class="insight-item">
+                                <span class="insight-label">Confidence</span>
+                                <span class="insight-value">94.7%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sentiment Analysis Tool -->
+                <div class="ai-tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">💭</div>
+                        <h3>Economic Sentiment AI</h3>
+                        <div class="tool-status">
+                            <span class="status-indicator active"></span>
+                            <span class="status-text">Online</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-interface">
+                        <div class="input-group">
+                            <label>Text to Analyze</label>
+                            <textarea id="sentiment-text" placeholder="Enter economic text, news article, or policy document..."></textarea>
+                        </div>
+                        
+                        <button class="btn btn--primary tool-run-btn" id="run-sentiment">
+                            <span class="btn-loading"></span>
+                            Analyze Sentiment
+                        </button>
+                    </div>
+                    
+                    <div class="tool-results" id="sentiment-results">
+                        <div class="sentiment-score">
+                            <div class="sentiment-meter">
+                                <div class="meter-fill" style="width: 75%"></div>
+                            </div>
+                            <div class="sentiment-value">Positive (0.75)</div>
+                        </div>
+                        
+                        <div class="sentiment-breakdown">
+                            <div class="sentiment-item">
+                                <span class="sentiment-label">Positive</span>
+                                <span class="sentiment-percent">75%</span>
+                            </div>
+                            <div class="sentiment-item">
+                                <span class="sentiment-label">Neutral</span>
+                                <span class="sentiment-percent">20%</span>
+                            </div>
+                            <div class="sentiment-item">
+                                <span class="sentiment-label">Negative</span>
+                                <span class="sentiment-percent">5%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="key-phrases">
+                            <h4>Key Economic Phrases</h4>
+                            <div class="phrase-tags">
+                                <span class="phrase-tag positive">economic growth</span>
+                                <span class="phrase-tag positive">market stability</span>
+                                <span class="phrase-tag neutral">policy changes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Policy Impact Simulator -->
+                <div class="ai-tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">⚖️</div>
+                        <h3>Policy Impact Simulator</h3>
+                        <div class="tool-status">
+                            <span class="status-indicator active"></span>
+                            <span class="status-text">Online</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-interface">
+                        <div class="input-group">
+                            <label>Policy Type</label>
+                            <select id="policy-type">
+                                <option value="fiscal">Fiscal Policy</option>
+                                <option value="monetary">Monetary Policy</option>
+                                <option value="trade">Trade Policy</option>
+                                <option value="regulation">Regulation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label>Policy Magnitude</label>
+                            <input type="range" id="policy-magnitude" min="-10" max="10" value="0">
+                            <span class="range-value">0%</span>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label>Implementation Period</label>
+                            <select id="implementation-period">
+                                <option value="immediate">Immediate</option>
+                                <option value="gradual">Gradual (6 months)</option>
+                                <option value="phased">Phased (1 year)</option>
+                            </select>
+                        </div>
+                        
+                        <button class="btn btn--primary tool-run-btn" id="run-simulation">
+                            <span class="btn-loading"></span>
+                            Run Simulation
+                        </button>
+                    </div>
+                    
+                    <div class="tool-results" id="simulation-results">
+                        <div class="simulation-metrics">
+                            <div class="metric-grid">
+                                <div class="metric-item">
+                                    <span class="metric-icon">📊</span>
+                                    <span class="metric-label">GDP Impact</span>
+                                    <span class="metric-value positive">+1.2%</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-icon">💼</span>
+                                    <span class="metric-label">Employment</span>
+                                    <span class="metric-value positive">+0.8%</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-icon">💰</span>
+                                    <span class="metric-label">Inflation</span>
+                                    <span class="metric-value negative">+0.3%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <canvas id="simulation-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration Hub -->
+    <section class="page" id="collaboration">
+        <div class="container">
+            <header class="page-header">
+                <h1>Collaboration Hub</h1>
+                <p>Connect, collaborate, and create together</p>
+            </header>
+            
+            <!-- Real-time Collaboration Interface -->
+            <div class="collaboration-interface">
+                <div class="collab-sidebar">
+                    <div class="active-collaborators">
+                        <h3>Active Collaborators</h3>
+                        <div class="collaborator-list" id="collaborator-list">
+                            <div class="collaborator-item">
+                                <div class="collaborator-avatar">👤</div>
+                                <div class="collaborator-info">
+                                    <span class="collaborator-name">Dr. Sarah Johnson</span>
+                                    <span class="collaborator-status">Editing</span>
+                                </div>
+                                <div class="collaborator-indicator online"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-tools">
+                        <h3>Project Tools</h3>
+                        <button class="tool-btn" id="whiteboard-btn">
+                            <span class="tool-icon">🎨</span>
+                            Whiteboard
+                        </button>
+                        <button class="tool-btn" id="code-editor-btn">
+                            <span class="tool-icon">💻</span>
+                            Code Editor
+                        </button>
+                        <button class="tool-btn" id="data-viz-btn">
+                            <span class="tool-icon">📊</span>
+                            Data Viz
+                        </button>
+                        <button class="tool-btn" id="video-call-btn">
+                            <span class="tool-icon">📹</span>
+                            Video Call
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="collab-workspace">
+                    <div class="workspace-tabs">
+                        <button class="workspace-tab active" data-workspace="whiteboard">Whiteboard</button>
+                        <button class="workspace-tab" data-workspace="editor">Code Editor</button>
+                        <button class="workspace-tab" data-workspace="chat">Chat</button>
+                    </div>
+                    
+                    <div class="workspace-content">
+                        <!-- Collaborative Whiteboard -->
+                        <div class="workspace-panel active" id="whiteboard-workspace">
+                            <div class="whiteboard-tools">
+                                <button class="tool-btn" data-tool="pen">✏️</button>
+                                <button class="tool-btn" data-tool="eraser">🧽</button>
+                                <button class="tool-btn" data-tool="text">📝</button>
+                                <button class="tool-btn" data-tool="shape">⭕</button>
+                                <input type="color" class="color-picker" value="#21808d">
+                            </div>
+                            <canvas class="whiteboard-canvas" id="whiteboard-canvas"></canvas>
+                        </div>
+                        
+                        <!-- Collaborative Code Editor -->
+                        <div class="workspace-panel" id="editor-workspace">
+                            <div class="code-editor-header">
+                                <select class="language-selector">
+                                    <option value="python">Python</option>
+                                    <option value="r">R</option>
+                                    <option value="javascript">JavaScript</option>
+                                    <option value="sql">SQL</option>
+                                </select>
+                                <button class="run-code-btn">▶️ Run</button>
+                            </div>
+                            <div class="code-editor" id="code-editor">
+# Collaborative Economic Model
+import pandas as pd
+import numpy as np
+from sklearn.ensemble import RandomForestRegressor
+
+def economic_forecast(data):
+    """
+    Advanced economic forecasting model
+    """
+    model = RandomForestRegressor(n_estimators=100)
+    # Add your collaborative code here...
+    return predictions
+                            </div>
+                            <div class="code-output" id="code-output"></div>
+                        </div>
+                        
+                        <!-- Real-time Chat -->
+                        <div class="workspace-panel" id="chat-workspace">
+                            <div class="chat-messages" id="chat-messages">
+                                <div class="chat-message">
+                                    <div class="message-avatar">👤</div>
+                                    <div class="message-content">
+                                        <span class="message-author">Dr. Sarah Johnson</span>
+                                        <span class="message-text">What if we adjust the learning rate?</span>
+                                        <span class="message-time">2 min ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-input-area">
+                                <input type="text" class="chat-input" placeholder="Type your message...">
+                                <button class="send-message-btn">📤</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Gallery -->
+            <div class="project-gallery">
+                <h3>Recent Collaborative Projects</h3>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="project-preview">
+                            <canvas class="project-thumbnail"></canvas>
+                        </div>
+                        <div class="project-info">
+                            <h4>AI Economic Forecasting Model</h4>
+                            <p>Collaborative LSTM model for GDP prediction</p>
+                            <div class="project-collaborators">
+                                <span class="collaborator-count">3 collaborators</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Timeline -->
+    <section class="page" id="timeline">
+        <div class="container">
+            <header class="page-header">
+                <h1>Interactive Timeline</h1>
+                <p>Journey through my academic and research milestones</p>
+            </header>
+            
+            <div class="timeline-interface">
+                <div class="timeline-controls">
+                    <button class="timeline-filter active" data-filter="all">All</button>
+                    <button class="timeline-filter" data-filter="education">Education</button>
+                    <button class="timeline-filter" data-filter="research">Research</button>
+                    <button class="timeline-filter" data-filter="publications">Publications</button>
+                    <button class="timeline-filter" data-filter="awards">Awards</button>
+                </div>
+                
+                <div class="timeline-3d-container">
+                    <div class="timeline-3d" id="timeline-3d-scene"></div>
+                </div>
+                
+                <div class="timeline-details" id="timeline-details">
+                    <div class="detail-card">
+                        <h3>Select a milestone to explore</h3>
+                        <p>Click on any point in the timeline to see detailed information</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Contact Section -->
+    <section class="page" id="contact">
+        <div class="container">
+            <header class="page-header">
+                <h1>Get in Touch</h1>
+                <p>Connect with me through multiple channels</p>
+            </header>
+            
+            <div class="contact-interface">
+                <div class="contact-methods">
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>frederic.mirindi@umanitoba.ca</p>
+                        <button class="contact-btn" data-method="email">Send Email</button>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">💬</div>
+                        <h3>Live Chat</h3>
+                        <p>Real-time conversation</p>
+                        <button class="contact-btn" data-method="chat">Start Chat</button>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">📅</div>
+                        <h3>Schedule Meeting</h3>
+                        <p>Book a consultation</p>
+                        <button class="contact-btn" data-method="schedule">Schedule</button>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">🎥</div>
+                        <h3>Video Call</h3>
+                        <p>Face-to-face discussion</p>
+                        <button class="contact-btn" data-method="video">Start Call</button>
+                    </div>
+                </div>
+                
+                <!-- Smart Contact Form -->
+                <div class="smart-contact-form">
+                    <h3>Smart Contact Form</h3>
+                    <form id="smart-contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" id="contact-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" id="contact-email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <select id="contact-subject">
+                                <option value="">Select a topic...</option>
+                                <option value="research">Research Collaboration</option>
+                                <option value="consultation">Consultation</option>
+                                <option value="speaking">Speaking Engagement</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea id="contact-message" placeholder="Tell me about your project or inquiry..."></textarea>
+                            <div class="ai-suggestions" id="message-suggestions">
+                                <span class="suggestion-label">AI Suggestions:</span>
+                                <button type="button" class="suggestion-btn">Research collaboration</button>
+                                <button type="button" class="suggestion-btn">Data analysis project</button>
+                                <button type="button" class="suggestion-btn">Speaking opportunity</button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Priority Level</label>
+                            <div class="priority-selector">
+                                <input type="radio" id="priority-low" name="priority" value="low">
+                                <label for="priority-low">Low</label>
+                                <input type="radio" id="priority-medium" name="priority" value="medium" checked>
+                                <label for="priority-medium">Medium</label>
+                                <input type="radio" id="priority-high" name="priority" value="high">
+                                <label for="priority-high">High</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn--secondary" id="analyze-message">
+                                🧠 AI Analyze
+                            </button>
+                            <button type="submit" class="btn btn--primary">
+                                📤 Send Message
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div class="message-analysis" id="message-analysis">
+                        <h4>AI Message Analysis</h4>
+                        <div class="analysis-results">
+                            <!-- AI analysis results will appear here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer advanced-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Frédéric Mirindi</h4>
+                <p>PhD Candidate - Economics & AI</p>
+                <p>Building the future of economic research</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">🔗 LinkedIn</a>
+                    <a href="#" class="social-link">🐦 Twitter</a>
+                    <a href="#" class="social-link">📚 Scholar</a>
+                    <a href="#" class="social-link">🔬 ResearchGate</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Research Areas</h4>
+                <ul>
+                    <li>AI in Economics</li>
+                    <li>Machine Learning</li>
+                    <li>Economic Forecasting</li>
+                    <li>Policy Analysis</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <p>📧 frederic.mirindi@umanitoba.ca</p>
+                <p>📱 +1 (204) 298-4337</p>
+                <p>📍 Winnipeg, MB, Canada</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Status</h4>
+                <div class="status-indicators">
+                    <div class="status-item">
+                        <span class="status-dot active"></span>
+                        <span>AI Assistant: Online</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-dot active"></span>
+                        <span>Research Lab: Active</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-dot active"></span>
+                        <span>Collaboration: Open</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Frédéric Mirindi. All rights reserved.</p>
+            <p>Powered by AI & Built with Innovation</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Loading Screen -->
+<div class="loading-screen" id="loading-screen">
+    <div class="loading-content">
+        <div class="loading-logo">🤖</div>
+        <h2>Initializing AI Systems...</h2>
+        <div class="loading-progress">
+            <div class="progress-bar" id="loading-progress-bar"></div>
+        </div>
+        <div class="loading-status" id="loading-status">Loading neural networks...</div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="app.js"></script>
+<script src="advanced-features.js"></script>
+<script src="ai-assistant.js"></script>
+<script src="3d-visualizations.js"></script>
+
+</body>
+</html>
