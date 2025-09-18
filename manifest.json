@@ -1,0 +1,141 @@
+{
+  "name": "Frédéric Mirindi - Advanced Portfolio",
+  "short_name": "FM Portfolio",
+  "description": "Advanced AI-powered portfolio of Frédéric Mirindi - PhD Candidate in Economics & Econometrics",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#21808d",
+  "background_color": "#ffffff",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["education", "research", "technology"],
+  "screenshots": [
+    {
+      "src": "images/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "images/screenshot-mobile.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "icons": [
+    {
+      "src": "favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Research Lab",
+      "short_name": "Lab",
+      "description": "Access the AI Research Laboratory",
+      "url": "/#research-lab",
+      "icons": [
+        {
+          "src": "images/shortcut-lab.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "AI Tools",
+      "short_name": "Tools",
+      "description": "Interactive AI research tools",
+      "url": "/#ai-tools",
+      "icons": [
+        {
+          "src": "images/shortcut-tools.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Collaborate",
+      "short_name": "Collab",
+      "description": "Real-time collaboration space",
+      "url": "/#collaboration",
+      "icons": [
+        {
+          "src": "images/shortcut-collab.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with Frédéric",
+      "url": "/#contact",
+      "icons": [
+        {
+          "src": "images/shortcut-contact.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://fredericmirindi.com"
+    }
+  ],
+  "prefer_related_applications": false,
+  "features": [
+    "ai-assistant",
+    "3d-visualizations",
+    "real-time-collaboration",
+    "advanced-search",
+    "interactive-timeline",
+    "smart-forms"
+  ]
+}
