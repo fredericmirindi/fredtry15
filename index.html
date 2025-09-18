@@ -14,6 +14,7 @@
     <!-- Advanced CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="advanced-features.css">
+    <link rel="stylesheet" href="enhanced-research-lab.css">
     
     <!-- External Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -125,16 +126,16 @@
                         
                         <div class="hero-stats">
                             <div class="stat-item">
-                                <span class="stat-number" data-target="25">0</span>
+                                <span class="stat-number" data-target="3">0</span>
                                 <span class="stat-label">Publications</span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-number" data-target="15">0</span>
-                                <span class="stat-label">AI Models</span>
+                                <span class="stat-number" data-target="5">0</span>
+                                <span class="stat-label">Active Projects</span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-number" data-target="50">0</span>
-                                <span class="stat-label">Citations</span>
+                                <span class="stat-number" data-target="12">0</span>
+                                <span class="stat-label">Collaborators</span>
                             </div>
                         </div>
                         
@@ -193,7 +194,7 @@
                         <div class="metric-icon">🌐</div>
                         <div class="metric-content">
                             <h3>Global Reach</h3>
-                            <div class="metric-value" id="global-reach">42</div>
+                            <div class="metric-value" id="global-reach">4</div>
                             <div class="metric-trend">Countries citing work</div>
                         </div>
                         <div class="world-map-mini" id="reach-map"></div>
@@ -203,7 +204,7 @@
                         <div class="metric-icon">🤝</div>
                         <div class="metric-content">
                             <h3>Collaborations</h3>
-                            <div class="metric-value" id="collaborations">18</div>
+                            <div class="metric-value" id="collaborations">12</div>
                             <div class="metric-trend">Active projects</div>
                         </div>
                         <div class="collaboration-network" id="collab-network"></div>
@@ -213,95 +214,601 @@
         </div>
     </section>
 
-    <!-- Advanced Research Lab -->
+    <!-- Enhanced Research Lab Section -->
     <section class="page" id="research-lab">
         <div class="container">
+            <!-- Enhanced Header with Research Status -->
             <header class="page-header">
-                <h1>Research Laboratory</h1>
-                <p>Interactive exploration of cutting-edge AI research in economics</p>
+                <div class="header-content">
+                    <h1>Research Laboratory</h1>
+                    <p class="header-subtitle">AI-Economics Research Hub | PhD Candidate Portfolio</p>
+                    <div class="research-status">
+                        <div class="status-indicator">
+                            <span class="status-dot active"></span>
+                            <span class="status-text">Active Research | PhD in Progress</span>
+                        </div>
+                        <div class="last-updated">Last Updated: Sept 2025</div>
+                    </div>
+                </div>
             </header>
             
-            <div class="lab-interface">
-                <!-- Research Areas with 3D Visualization -->
-                <div class="research-areas-3d">
-                    <div class="area-selector">
-                        <button class="area-btn active" data-area="forecasting">Economic Forecasting</button>
-                        <button class="area-btn" data-area="nlp">NLP Economics</button>
-                        <button class="area-btn" data-area="blockchain">Blockchain Economics</button>
-                        <button class="area-btn" data-area="policy">Policy Analysis</button>
+            <!-- Research Overview Dashboard -->
+            <div class="research-overview">
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <div class="card-icon">📊</div>
+                        <div class="card-content">
+                            <h3>Active Projects</h3>
+                            <div class="metric-value">3</div>
+                            <div class="metric-detail">PhD Research Focus</div>
+                        </div>
                     </div>
-                    <div class="area-visualization" id="research-3d-scene"></div>
+                    <div class="overview-card">
+                        <div class="card-icon">📝</div>
+                        <div class="card-content">
+                            <h3>Research Output</h3>
+                            <div class="metric-value">5</div>
+                            <div class="metric-detail">Papers & Presentations</div>
+                        </div>
+                    </div>
+                    <div class="overview-card">
+                        <div class="card-icon">👥</div>
+                        <div class="card-content">
+                            <h3>Collaborators</h3>
+                            <div class="metric-value">8</div>
+                            <div class="metric-detail">Across 3 institutions</div>
+                        </div>
+                    </div>
+                    <div class="overview-card">
+                        <div class="card-icon">🎯</div>
+                        <div class="card-content">
+                            <h3>Research Areas</h3>
+                            <div class="metric-value">4</div>
+                            <div class="metric-detail">AI, Economics, Policy</div>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Interactive Model Playground -->
-                <div class="model-playground">
-                    <h3>AI Model Playground</h3>
-                    <div class="playground-controls">
-                        <div class="control-group">
-                            <label>Model Type</label>
-                            <select id="model-type">
-                                <option value="lstm">LSTM Neural Network</option>
-                                <option value="transformer">Transformer</option>
-                                <option value="gan">Generative Adversarial Network</option>
-                                <option value="reinforcement">Reinforcement Learning</option>
-                            </select>
-                        </div>
-                        <div class="control-group">
-                            <label>Dataset</label>
-                            <select id="dataset">
-                                <option value="gdp">GDP Time Series</option>
-                                <option value="inflation">Inflation Rates</option>
-                                <option value="market">Stock Market Data</option>
-                                <option value="policy">Policy Documents</option>
-                            </select>
-                        </div>
-                        <button class="btn btn--primary" id="run-model">Run Model</button>
-                    </div>
+            </div>
+    
+            <!-- Research Areas Navigation -->
+            <div class="research-navigation">
+                <nav class="research-tabs">
+                    <button class="tab-btn active" data-tab="projects">Active Projects</button>
+                    <button class="tab-btn" data-tab="methodology">Research Methods</button>
+                    <button class="tab-btn" data-tab="team">Supervision & Team</button>
+                    <button class="tab-btn" data-tab="output">Research Output</button>
+                    <button class="tab-btn" data-tab="tools">Tools & Tech</button>
+                </nav>
+            </div>
+    
+            <!-- Active Projects Tab -->
+            <div class="tab-content active" id="projects-tab">
+                <div class="projects-section">
+                    <h2>Current PhD Research Projects</h2>
                     
-                    <div class="model-results" id="model-results">
-                        <div class="results-tabs">
-                            <button class="tab active" data-tab="visualization">Visualization</button>
-                            <button class="tab" data-tab="metrics">Metrics</button>
-                            <button class="tab" data-tab="code">Code</button>
-                        </div>
-                        <div class="results-content">
-                            <div class="tab-content active" id="visualization-tab">
-                                <canvas id="model-viz-chart"></canvas>
+                    <!-- Project Grid -->
+                    <div class="projects-grid">
+                        <!-- Main Dissertation Project -->
+                        <div class="project-card featured">
+                            <div class="project-header">
+                                <div class="project-status in-progress">Dissertation - In Progress</div>
+                                <div class="project-category">AI & Economics</div>
                             </div>
-                            <div class="tab-content" id="metrics-tab">
-                                <div class="metrics-grid">
-                                    <div class="metric-item">
-                                        <span class="metric-label">Accuracy</span>
-                                        <span class="metric-value">94.7%</span>
+                            <h3>Machine Learning for Economic Forecasting</h3>
+                            <p class="project-description">
+                                Developing advanced deep learning models for macroeconomic forecasting using 
+                                alternative data sources and high-frequency economic indicators. This dissertation 
+                                explores LSTM, Transformer, and hybrid architectures for economic prediction.
+                            </p>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Timeline:</span>
+                                    <span class="detail-value">Sep 2022 - Expected May 2026</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Supervisor:</span>
+                                    <span class="detail-value">Dr. [Supervisor Name], University of Manitoba</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Funding:</span>
+                                    <span class="detail-value">Graduate Fellowship, Research Assistantship</span>
+                                </div>
+                            </div>
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 60%"></div>
+                                </div>
+                                <span class="progress-text">60% Complete - Data Collection & Analysis Phase</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-outline" onclick="showProjectDetails('dissertation')">View Details</button>
+                                <button class="btn btn-outline" onclick="openLink('https://github.com/fredericmirindi')">Code Repository</button>
+                            </div>
+                        </div>
+    
+                        <!-- ThinkBit Edge Research -->
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-status active">Industry Research</div>
+                                <div class="project-category">Applied AI</div>
+                            </div>
+                            <h3>ThinkBit Edge - AI Economic Consulting</h3>
+                            <p class="project-description">
+                                Leading applied research initiatives for ThinkBit Edge Corp, developing 
+                                commercial AI solutions for economic analysis and business forecasting.
+                            </p>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Role:</span>
+                                    <span class="detail-value">Founder & Research Lead</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Focus:</span>
+                                    <span class="detail-value">Commercial AI Applications</span>
+                                </div>
+                            </div>
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%"></div>
+                                </div>
+                                <span class="progress-text">75% - Active Client Projects</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-outline" onclick="openLink('https://thinkbitedge.com')">Company Website</button>
+                            </div>
+                        </div>
+    
+                        <!-- Conference Paper Project -->
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-status under-review">Paper Submitted</div>
+                                <div class="project-category">Academic Research</div>
+                            </div>
+                            <h3>Policy Impact Analysis using NLP</h3>
+                            <p class="project-description">
+                                Analyzing the economic impact of monetary policy announcements using 
+                                natural language processing and sentiment analysis techniques.
+                            </p>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Status:</span>
+                                    <span class="detail-value">Under Review - Canadian Economics Association</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Co-authors:</span>
+                                    <span class="detail-value">Dr. [Name], Prof. [Name]</span>
+                                </div>
+                            </div>
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                                <span class="progress-text">90% - Awaiting Review Response</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-outline">Working Paper</button>
+                                <button class="btn btn-outline">Methodology</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- PhD Timeline -->
+                    <div class="phd-timeline">
+                        <h3>PhD Journey Timeline</h3>
+                        <div class="timeline-container">
+                            <div class="timeline-track">
+                                <div class="timeline-item completed">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4>PhD Program Start</h4>
+                                        <p>Began PhD in Economics at University of Manitoba</p>
+                                        <span class="timeline-date">September 2022</span>
                                     </div>
-                                    <div class="metric-item">
-                                        <span class="metric-label">Loss</span>
-                                        <span class="metric-value">0.023</span>
+                                </div>
+                                <div class="timeline-item completed">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4>Coursework Completion</h4>
+                                        <p>Completed core economics and econometrics courses</p>
+                                        <span class="timeline-date">April 2024</span>
                                     </div>
-                                    <div class="metric-item">
-                                        <span class="metric-label">Training Time</span>
-                                        <span class="metric-value">2.3s</span>
+                                </div>
+                                <div class="timeline-item active">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4>Dissertation Research</h4>
+                                        <p>Active research phase - data collection and analysis</p>
+                                        <span class="timeline-date">Current Phase</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item future">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4>Dissertation Defense</h4>
+                                        <p>Expected thesis defense and PhD completion</p>
+                                        <span class="timeline-date">Spring 2026</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-content" id="code-tab">
-                                <pre><code class="language-python"># AI Model Implementation
-import tensorflow as tf
-import numpy as np
-
-class EconomicForecaster:
-    def __init__(self):
-        self.model = self.build_model()
+                        </div>
+                    </div>
+                </div>
+            </div>
     
-    def build_model(self):
-        model = tf.keras.Sequential([
-            tf.keras.layers.LSTM(50, return_sequences=True),
-            tf.keras.layers.Dropout(0.2),
-            tf.keras.layers.LSTM(50),
-            tf.keras.layers.Dense(1)
-        ])
-        model.compile(optimizer='adam', loss='mse')
-        return model</code></pre>
+            <!-- Research Methods Tab -->
+            <div class="tab-content" id="methodology-tab">
+                <div class="methodology-section">
+                    <h2>Research Methodology & Approach</h2>
+                    
+                    <!-- Methodology Overview -->
+                    <div class="methodology-overview">
+                        <div class="methodology-card">
+                            <h3>📊 Quantitative Methods</h3>
+                            <ul>
+                                <li>Time Series Econometrics (ARIMA, VAR, VECM)</li>
+                                <li>Machine Learning (LSTM, Transformers, Random Forest)</li>
+                                <li>Causal Inference Techniques</li>
+                                <li>Bayesian Statistical Methods</li>
+                                <li>High-Frequency Data Analysis</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="methodology-card">
+                            <h3>🤖 AI & ML Techniques</h3>
+                            <ul>
+                                <li>Deep Learning (TensorFlow, PyTorch)</li>
+                                <li>Natural Language Processing</li>
+                                <li>Time Series Forecasting Models</li>
+                                <li>Ensemble Methods</li>
+                                <li>Model Validation & Testing</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="methodology-card">
+                            <h3>📈 Data Sources</h3>
+                            <ul>
+                                <li>Statistics Canada Economic Data</li>
+                                <li>Federal Reserve Economic Data (FRED)</li>
+                                <li>Financial Market Data</li>
+                                <li>Alternative Data Sources</li>
+                                <li>Policy Documents & Communications</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <!-- Research Framework -->
+                    <div class="research-framework">
+                        <h3>Research Framework</h3>
+                        <div class="framework-steps">
+                            <div class="framework-step">
+                                <div class="step-number">1</div>
+                                <h4>Literature Review</h4>
+                                <p>Systematic review of existing research using digital tools and databases</p>
+                            </div>
+                            <div class="framework-step">
+                                <div class="step-number">2</div>
+                                <h4>Data Collection</h4>
+                                <p>Multi-source data gathering with emphasis on data quality and reliability</p>
+                            </div>
+                            <div class="framework-step">
+                                <div class="step-number">3</div>
+                                <h4>Model Development</h4>
+                                <p>Design and implementation of ML models with rigorous validation</p>
+                            </div>
+                            <div class="framework-step">
+                                <div class="step-number">4</div>
+                                <h4>Analysis & Testing</h4>
+                                <p>Statistical analysis, hypothesis testing, and robustness checks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Team & Supervision Tab -->
+            <div class="tab-content" id="team-tab">
+                <div class="team-section">
+                    <h2>PhD Supervision & Academic Network</h2>
+                    
+                    <!-- PhD Committee -->
+                    <div class="phd-committee">
+                        <h3>PhD Supervision Committee</h3>
+                        <div class="committee-grid">
+                            <div class="committee-member supervisor">
+                                <div class="member-photo">
+                                    <div class="placeholder-photo">👨‍🏫</div>
+                                    <div class="member-role-badge">Supervisor</div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Dr. [Supervisor Name]</h4>
+                                    <p class="member-title">Professor of Economics</p>
+                                    <p class="member-affiliation">University of Manitoba</p>
+                                    <p class="member-expertise">Macroeconomics, Econometric Methods</p>
+                                    <div class="member-contact">
+                                        <button class="btn btn-sm btn-outline">📧 Contact</button>
+                                        <button class="btn btn-sm btn-outline">📊 Profile</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="committee-member">
+                                <div class="member-photo">
+                                    <div class="placeholder-photo">👩‍🏫</div>
+                                    <div class="member-role-badge">Committee</div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Dr. [Committee Member]</h4>
+                                    <p class="member-title">Associate Professor</p>
+                                    <p class="member-affiliation">University of Manitoba</p>
+                                    <p class="member-expertise">Applied Econometrics, Data Science</p>
+                                    <div class="member-contact">
+                                        <button class="btn btn-sm btn-outline">📧 Contact</button>
+                                        <button class="btn btn-sm btn-outline">📊 Profile</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Research Collaborators -->
+                    <div class="collaborators-section">
+                        <h3>Research Collaborators & Network</h3>
+                        <div class="collaborators-grid">
+                            <div class="collaborator-card">
+                                <div class="collaborator-info">
+                                    <h4>ThinkBit Edge Research Team</h4>
+                                    <p>Industry research collaboration for applied AI solutions</p>
+                                    <div class="collaboration-focus">
+                                        <span class="focus-tag">Applied Research</span>
+                                        <span class="focus-tag">Commercial AI</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="collaborator-card">
+                                <div class="collaborator-info">
+                                    <h4>Graduate Student Research Group</h4>
+                                    <p>Collaborative research with fellow PhD students in economics</p>
+                                    <div class="collaboration-focus">
+                                        <span class="focus-tag">Peer Research</span>
+                                        <span class="focus-tag">Knowledge Sharing</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Academic Affiliations -->
+                    <div class="affiliations-section">
+                        <h3>Academic Affiliations</h3>
+                        <div class="affiliations-list">
+                            <div class="affiliation-item">
+                                <h4>University of Manitoba - Department of Economics</h4>
+                                <p>PhD Student | Graduate Research Assistant</p>
+                            </div>
+                            <div class="affiliation-item">
+                                <h4>Canadian Economics Association</h4>
+                                <p>Student Member | Conference Participant</p>
+                            </div>
+                            <div class="affiliation-item">
+                                <h4>ThinkBit Edge Corp.</h4>
+                                <p>Founder & Chief Research Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Research Output Tab -->
+            <div class="tab-content" id="output-tab">
+                <div class="output-section">
+                    <h2>Research Output & Academic Contributions</h2>
+                    
+                    <!-- Work in Progress -->
+                    <div class="wip-section">
+                        <h3>Work in Progress</h3>
+                        <div class="output-list">
+                            <div class="output-item dissertation">
+                                <div class="output-status">Dissertation</div>
+                                <div class="output-content">
+                                    <h4>"Machine Learning Approaches to Economic Forecasting: Theory and Applications"</h4>
+                                    <p class="output-description">
+                                        PhD dissertation exploring the application of deep learning techniques to 
+                                        macroeconomic forecasting, with emphasis on model interpretability and policy implications.
+                                    </p>
+                                    <div class="output-details">
+                                        <span class="detail-item">📅 Expected: Spring 2026</span>
+                                        <span class="detail-item">📊 Progress: 60%</span>
+                                        <span class="detail-item">📝 3 chapters completed</span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="output-item paper">
+                                <div class="output-status">Under Review</div>
+                                <div class="output-content">
+                                    <h4>"Policy Communication Effects in Financial Markets: An NLP Approach"</h4>
+                                    <p class="output-description">
+                                        Analysis of how central bank communications affect market sentiment and economic indicators 
+                                        using advanced natural language processing techniques.
+                                    </p>
+                                    <div class="output-details">
+                                        <span class="detail-item">📅 Submitted: March 2025</span>
+                                        <span class="detail-item">📖 Journal: Under Review</span>
+                                        <span class="detail-item">👥 Co-authors: 2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Conference Presentations -->
+                    <div class="presentations-section">
+                        <h3>Conference Presentations</h3>
+                        <div class="presentations-list">
+                            <div class="presentation-item">
+                                <div class="presentation-date">2025</div>
+                                <div class="presentation-content">
+                                    <h4>Canadian Economics Association Annual Conference</h4>
+                                    <p>"AI Applications in Economic Analysis: Current State and Future Directions"</p>
+                                    <span class="presentation-location">📍 Toronto, ON</span>
+                                </div>
+                            </div>
+                            
+                            <div class="presentation-item">
+                                <div class="presentation-date">2024</div>
+                                <div class="presentation-content">
+                                    <h4>Graduate Student Research Conference</h4>
+                                    <p>"Machine Learning Methods in Economic Forecasting"</p>
+                                    <span class="presentation-location">📍 University of Manitoba</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Research Impact -->
+                    <div class="impact-section">
+                        <h3>Research Impact</h3>
+                        <div class="impact-metrics">
+                            <div class="impact-card">
+                                <div class="impact-icon">📊</div>
+                                <div class="impact-content">
+                                    <h4>Academic Engagement</h4>
+                                    <div class="impact-value">Growing</div>
+                                    <p>Building citations and academic network</p>
+                                </div>
+                            </div>
+                            
+                            <div class="impact-card">
+                                <div class="impact-icon">🏢</div>
+                                <div class="impact-content">
+                                    <h4>Industry Application</h4>
+                                    <div class="impact-value">Active</div>
+                                    <p>ThinkBit Edge client projects</p>
+                                </div>
+                            </div>
+                            
+                            <div class="impact-card">
+                                <div class="impact-icon">🎓</div>
+                                <div class="impact-content">
+                                    <h4>Knowledge Transfer</h4>
+                                    <div class="impact-value">Ongoing</div>
+                                    <p>Teaching and mentoring activities</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Tools & Tech Tab -->
+            <div class="tab-content" id="tools-tab">
+                <div class="tools-section">
+                    <h2>Research Tools & Technology Stack</h2>
+                    
+                    <!-- Technical Stack -->
+                    <div class="tech-stack">
+                        <div class="tech-categories">
+                            <div class="tech-category">
+                                <h4>Programming Languages</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag python">Python</span>
+                                    <span class="tech-tag r">R</span>
+                                    <span class="tech-tag">SQL</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Stata</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h4>ML Frameworks</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">TensorFlow</span>
+                                    <span class="tech-tag">PyTorch</span>
+                                    <span class="tech-tag">Scikit-learn</span>
+                                    <span class="tech-tag">Keras</span>
+                                    <span class="tech-tag">Pandas</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h4>Data & Visualization</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">NumPy</span>
+                                    <span class="tech-tag">Matplotlib</span>
+                                    <span class="tech-tag">Plotly</span>
+                                    <span class="tech-tag">Tableau</span>
+                                    <span class="tech-tag">D3.js</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h4>Tools & Platforms</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Jupyter</span>
+                                    <span class="tech-tag">Git</span>
+                                    <span class="tech-tag">Docker</span>
+                                    <span class="tech-tag">Google Colab</span>
+                                    <span class="tech-tag">LaTeX</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Research Workflow -->
+                    <div class="workflow-section">
+                        <h3>Research Workflow</h3>
+                        <div class="workflow-diagram">
+                            <div class="workflow-step">
+                                <div class="step-icon">📚</div>
+                                <h4>Literature Review</h4>
+                                <p>Systematic review using academic databases and tools</p>
+                            </div>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step">
+                                <div class="step-icon">📊</div>
+                                <h4>Data Collection</h4>
+                                <p>Multi-source data gathering and preprocessing</p>
+                            </div>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step">
+                                <div class="step-icon">🤖</div>
+                                <h4>Model Development</h4>
+                                <p>ML model design, training, and validation</p>
+                            </div>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step">
+                                <div class="step-icon">📝</div>
+                                <h4>Analysis & Writing</h4>
+                                <p>Results analysis and academic writing</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Code Repositories -->
+                    <div class="repositories-section">
+                        <h3>Code Repositories & Open Source</h3>
+                        <div class="repo-grid">
+                            <div class="repo-card">
+                                <h4>🔗 phd-research-code</h4>
+                                <p>Code and scripts for PhD dissertation research</p>
+                                <div class="repo-stats">
+                                    <span class="repo-stat">🐍 Python</span>
+                                    <span class="repo-stat">📊 Economics</span>
+                                    <span class="repo-stat">🔬 Research</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline" onclick="openLink('https://github.com/fredericmirindi')">View on GitHub</button>
+                            </div>
+                            
+                            <div class="repo-card">
+                                <h4>🔗 economic-ml-tools</h4>
+                                <p>Machine learning tools for economic analysis</p>
+                                <div class="repo-stats">
+                                    <span class="repo-stat">🤖 ML</span>
+                                    <span class="repo-stat">📈 Economics</span>
+                                    <span class="repo-stat">🛠️ Tools</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline" onclick="openLink('https://github.com/fredericmirindi')">View on GitHub</button>
                             </div>
                         </div>
                     </div>
@@ -930,6 +1437,7 @@ def economic_forecast(data):
 <script src="advanced-features.js"></script>
 <script src="ai-assistant.js"></script>
 <script src="3d-visualizations.js"></script>
+<script src="enhanced-research-lab.js"></script>
 
 </body>
 </html>
